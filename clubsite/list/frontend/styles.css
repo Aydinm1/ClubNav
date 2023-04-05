@@ -27,3 +27,43 @@ h1{
     height:5%;
     background-color:black;
 }
+
+#suggestedBackground {
+    width:100px;
+    height:47px;
+    background-color: aqua;
+}
+
+#suggestedOne {
+    display:block;
+    color:black;
+    font-size: 20px;
+    text-align:center;
+    padding:12px 16px;
+    text-decoration: none;
+}
+
+#suggestedOne:hover{
+    background-color:white;
+}
+
+#alphListBack{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:white;
+}
+
+li a{
+    float:none;
+    display:block;
+    color:black;
+    text-align:left;
+    padding:12px 16px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color:greenyellow;
+}

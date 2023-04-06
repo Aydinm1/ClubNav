@@ -1,6 +1,5 @@
 from django.db import models
 
-# DO NOT RUN INTEGRATE THIS INTO SQL YET. IT WILL LIKELY BREAK THE DATABASE. 
 # Create your models here.
 
 class Club(models.Model):

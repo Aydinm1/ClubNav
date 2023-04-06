@@ -87,12 +87,12 @@ h1{
     background-color:white;
 }
 
-#alphListBack{
-    list-style-type:none;
+.alphListBack{
     margin:0;
     padding:0;
     overflow:hidden;
-    background-color:white;
+    background-color:transparent;
+    width:50%;
 }
 
 li a{
@@ -105,5 +105,5 @@ li a{
 }
 
 li a:hover{
-    background-color:greenyellow;
+    background-color:lightgrey;
 }

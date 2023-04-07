@@ -87,12 +87,17 @@ h1{
     background-color:white;
 }
 
+#alphabeticalList{
+    width: 40rem;
+    clear:both;
+}
+
 .alphListBack{
     margin:0;
     padding:0;
     overflow:hidden;
     background-color:transparent;
-    width:50%;
+    width:40rem;
 }
 
 li a{

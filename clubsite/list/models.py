@@ -6,8 +6,14 @@ from django.contrib import admin
 class Days(models.Model):
     days = models.CharField(max_length=9)
 
+    def __str__(self):
+        return self.days
+
 class Categories(models.Model):
     categories = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.categories
 
 class Club(models.Model):
     name = models.CharField(max_length=50)

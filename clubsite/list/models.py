@@ -28,13 +28,13 @@ class Club(models.Model):
         choices=category_choices,
     )
     meeting_days_choices = [
-    ('SU', 'Sunday'),
-    ('MO', 'Monday'),
-    ('TU', 'Tuesday'),
-    ('WE', 'Wednesday'),
-    ('TH', 'Thursday'),
-    ('FR', 'Friday'),
-    ('SA', 'Saturday'),
+        ('SU', 'Sunday'),
+        ('MO', 'Monday'),
+        ('TU', 'Tuesday'),
+        ('WE', 'Wednesday'),
+        ('TH', 'Thursday'),
+        ('FR', 'Friday'),
+        ('SA', 'Saturday'),
     ]
     meeting_days = models.CharField(
         max_length=2,

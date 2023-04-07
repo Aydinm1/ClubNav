@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'list.apps.ListConfig',
 ]
 
 MIDDLEWARE = [
@@ -76,7 +77,11 @@ WSGI_APPLICATION = 'clubsite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': BASE_DIR / 'db.mysql',
+        'NAME': 'ninjapro_Clubs',
+        'USER': 'ninjapro_abe',
+        'PASSWORD': 'AbeSupreme@222',
+        'HOST': '45.79.135.22',
+        'PORT': '3306',
     }
 }
 

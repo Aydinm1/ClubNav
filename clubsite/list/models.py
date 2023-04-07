@@ -15,7 +15,7 @@ class Club(models.Model):
     picture = models.ImageField(upload_to='./images')
     sponsor = models.CharField(max_length=30)
     sponsor_email = models.EmailField()
-    category = models.ForeignKey(Categories)
+    category = models.ForeignKey(Categories, on_delete=models.CASCADE)
     meeting_days = models.ManyToManyField(Days)
 
     def __str__(self):

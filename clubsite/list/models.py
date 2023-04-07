@@ -5,7 +5,7 @@ from django.db import models
 class Club(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=300)
-    picture = models.ImageField()
+    picture = models.ImageField(upload_to='./images')
     sponsor = models.CharField(max_length=30)
     sponsor_email = models.EmailField()
     category_choices = [

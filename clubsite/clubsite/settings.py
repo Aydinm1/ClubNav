@@ -82,6 +82,7 @@ DATABASES = {
         'PASSWORD': 'AbeSupreme@222',
         'HOST': '45.79.135.22',
         'PORT': '3306',
+        'STORAGE_ENGINE': 'INNODB',
     }
 }
 

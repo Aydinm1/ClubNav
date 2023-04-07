@@ -6,16 +6,28 @@ from django.contrib import admin
 class Days(models.Model):
     days = models.CharField(max_length=9)
 
+    def __str__(self):
+        return self.days
+
 class Categories(models.Model):
     categories = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.categories
+    
+class SponsorName(models.Model):
+    sponsor_name = models.CharField(max_length=30)
+    sponsor_email = models.EmailField()
+
+    def __str__(self):
+        return self.sponsor_name
+
 class Club(models.Model):
     name = models.CharField(max_length=50)
-    description = models.CharField(max_length=300)
-    picture = models.ImageField(upload_to='./images')
-    sponsor = models.CharField(max_length=30)
-    sponsor_email = models.EmailField()
-    category = models.ForeignKey(Categories)
+    description = models.CharField(max_length=300, blank=True)
+    picture = models.ImageField(upload_to='./images', blank=True)
+    sponsor = models.ManyToManyField(SponsorName)
+    category = models.ForeignKey(Categories, on_delete=models.CASCADE)
     meeting_days = models.ManyToManyField(Days)
 
     def __str__(self):

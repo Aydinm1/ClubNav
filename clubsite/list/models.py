@@ -17,13 +17,16 @@ class Categories(models.Model):
     
 class SponsorName(models.Model):
     sponsor_name = models.CharField(max_length=30)
+    sponsor_email = models.EmailField()
+
+    def __str__(self):
+        return self.sponsor_name
 
 class Club(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=300, blank=True)
     picture = models.ImageField(upload_to='./images', blank=True)
     sponsor = models.ManyToManyField(SponsorName)
-    sponsor_email = models.EmailField()
     category = models.ForeignKey(Categories, on_delete=models.CASCADE)
     meeting_days = models.ManyToManyField(Days)
 

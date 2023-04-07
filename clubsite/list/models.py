@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib import admin
 
 # Create your models here.
 
@@ -38,6 +39,8 @@ class Club(models.Model):
     meeting_days = models.CharField(
         max_length=2,
         choices=meeting_days_choices,
+        default='FR',
     )
+
     def __str__(self):
         return self.name

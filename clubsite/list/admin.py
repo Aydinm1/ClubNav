@@ -3,5 +3,9 @@ from django.contrib import admin
 # Register your models here.
 
 from .models import Club
+from .forms import ClubAdminForm
 
-admin.site.register(Club)
+class ClubAdmin(admin.ModelAdmin):
+    form = ClubAdminForm
+
+admin.site.register(Club, ClubAdmin)

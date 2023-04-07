@@ -6,4 +6,4 @@ class ClubAdminForm(forms.ModelForm):
 
     class Meta:
         model = Club
-        fields = ('meeting_days',)
+        fields = ['meeting_days']

@@ -7,6 +7,5 @@ from .forms import ClubAdminForm
 
 class ClubAdmin(admin.ModelAdmin):
     form = ClubAdminForm
-    list_display = ('meeting_days',)
 
 admin.site.register(Club, ClubAdmin)

@@ -26,3 +26,18 @@ class Club(models.Model):
         max_length=17,
         choices=category_choices,
     )
+    meeting_days_choices = [
+        ('SU', 'Sunday'),
+        ('MO', 'Monday'),
+        ('TU', 'Tuesday'),
+        ('WE', 'Wednesday'),
+        ('TH', 'Thursday'),
+        ('FR', 'Friday'),
+        ('SA', 'Saturday'),
+    ]
+    meeting_days = models.CharField(
+        max_length=2,
+        choices=meeting_days_choices,
+    )
+    def __str__(self):
+        return self.name

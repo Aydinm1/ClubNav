@@ -18,7 +18,7 @@ class Categories(models.Model):
 class Club(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=300)
-    picture = models.ImageField(upload_to='./images')
+    picture = models.ImageField(upload_to='./images', blank=True)
     sponsor = models.CharField(max_length=30)
     sponsor_email = models.EmailField()
     category = models.ForeignKey(Categories, on_delete=models.CASCADE)

@@ -89,7 +89,8 @@ h1{
 
 #alphabeticalList{
     width: 40rem;
-    clear:both;
+    display:row;
+    flex-direction:row;
 }
 
 .alphListBack{

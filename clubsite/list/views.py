@@ -9,10 +9,9 @@ from .models import Club
 from django.template import loader
 
 latest_id = Club.objects.latest('id')
+random_club = Club.objects.get(id=random.sample(latest_id, 3))
 
-def index(request):
-    for _ in range(4):
-        random_club = Club.objects.get(id=random.randrange(1, latest_id))
+def index(request):   
     template = loader.get_template("list/index.html")
     return HttpResponse("Hello, world. You're at the polls index.")
 

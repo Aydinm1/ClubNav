@@ -14,5 +14,3 @@ random_club = Club.objects.get(id=random.sample(latest_id, 3))
 def index(request):   
     template = loader.get_template("list/index.html")
     return HttpResponse("Hello, world. You're at the polls index.")
-
-print(latest_id)

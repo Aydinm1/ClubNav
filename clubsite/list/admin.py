@@ -3,8 +3,6 @@ from django.contrib import admin
 # Register your models here.
 
 from .models import Club, Categories, SponsorName
-from django.db import models
-from django.forms import CheckboxSelectMultiple
 
 class ClubAdmin(admin.ModelAdmin):
     model = Club

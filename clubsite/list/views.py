@@ -8,7 +8,7 @@ from django.http import HttpResponse
 from .models import Club
 from django.template import loader
 
-
 def index(request):   
-    template = loader.get_template("list/index.html")
-    return HttpResponse("Hello, world. You're at the polls index.")
+    template = loader.get_template("index.html")
+    return HttpResponse(template.render())
+

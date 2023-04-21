@@ -24,7 +24,7 @@ class SponsorName(models.Model):
 
 class Club(models.Model):
     name = models.CharField(max_length=50)
-    description = models.CharField(max_length=300, blank=True)
+    description = models.CharField(max_length=5000, blank=True)
     picture = models.ImageField(upload_to='./images', blank=True)
     sponsor = models.ManyToManyField(SponsorName)
     category = models.ForeignKey(Categories, on_delete=models.CASCADE)

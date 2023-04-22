@@ -36,7 +36,7 @@ class Club(models.Model):
     description = models.TextField(blank=True)
     picture = models.ImageField(upload_to='./images', blank=True)
     sponsor = models.ManyToManyField(SponsorName)
-    club_president = models.ForeignKey(ClubPresidentName, on_delete=models.SET_NULL, null=True, blank=True)
+    club_president = models.ManyToManyField(ClubPresidentName, blank=True)
     category = models.ManyToManyField(Categories)
     recurrences = RecurrenceField()
     meeting_room = models.ManyToManyField(MeetingRooms, blank=True)

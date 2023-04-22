@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import MinLengthValidator
 from recurrence.fields import RecurrenceField
+from random import sample
 import datetime
 
 # Create your models here...

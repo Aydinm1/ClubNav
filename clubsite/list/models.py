@@ -54,3 +54,4 @@ class Club(models.Model):
         count = self.objects.all().count()
         random_index = sample(range(0, count), 3)
         return self.objects.filter(id__in=random_index)
+    

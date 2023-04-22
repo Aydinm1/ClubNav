@@ -17,6 +17,13 @@ class SponsorName(models.Model):
     def __str__(self):
         return self.sponsor_name
     
+class ClubPresidentName(models.Model):
+    club_president_name = models.CharField(max_length=30)
+    club_president_email = models.EmailField()
+
+    def __str__(self):
+        return self.sponsor_name
+    
 class MeetingRooms(models.Model):
     meeting_room_name = models.CharField(max_length=30, blank=True)
     meeting_room_number = models.CharField(max_length=5)
@@ -29,10 +36,13 @@ class Club(models.Model):
     description = models.TextField(blank=True)
     picture = models.ImageField(upload_to='./images', blank=True)
     sponsor = models.ManyToManyField(SponsorName)
+    club_president = models.ForeignKey(ClubPresidentName, on_delete=models.SET_NULL, null=True)
     category = models.ManyToManyField(Categories)
     recurrences = RecurrenceField()
     meeting_room = models.ManyToManyField(MeetingRooms, blank=True)
     google_classroom_code = models.CharField(max_length=7, validators=[MinLengthValidator(limit_value=6)], blank=True)
+    start_time = models.TimeField(null=True)
+    end_time = models.TimeField(null=True)
 
     def __str__(self):
         return self.name

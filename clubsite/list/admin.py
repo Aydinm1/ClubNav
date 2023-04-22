@@ -6,7 +6,7 @@ from .models import Club, Categories, SponsorName, MeetingRooms, ClubPresidentNa
 
 class ClubAdmin(admin.ModelAdmin):
     model = Club
-    filter_horizontal = ('sponsor', 'category', 'meeting_room',)
+    filter_horizontal = ('sponsor', 'category', 'meeting_room','club_president',)
 
 admin.site.register(Club, ClubAdmin)
 admin.site.register(Categories)

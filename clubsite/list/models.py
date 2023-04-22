@@ -30,7 +30,7 @@ class MeetingRooms(models.Model):
     meeting_room_number = models.CharField(max_length=5, blank=True)
 
     def __str__(self):
-        return self.meeting_room_number
+        return self.meeting_room_number + " " + self.meeting_room_name
 
 class Club(models.Model):
     name = models.CharField(max_length=50)

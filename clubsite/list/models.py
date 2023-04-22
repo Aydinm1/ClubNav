@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import MinLengthValidator
 from recurrence.fields import RecurrenceField
-from random import randint
+from random import sample
 import datetime
 
 # Create your models here...
@@ -52,5 +52,5 @@ class Club(models.Model):
     @classmethod
     def get_random_club(self):
         count = self.objects.all().count()
-        random_index = randint(0, count - 1)
-        return self.objects.all()[random_index]
+        random_index = sample(range(0, count), 3)
+        return self.objects.filter(id__in=random_index)

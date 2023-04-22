@@ -35,7 +35,7 @@ class Club(models.Model):
     category = models.ForeignKey(Categories, on_delete=models.CASCADE)
     recurrences = RecurrenceField()
     meeting_room = models.ManyToManyField(MeetingRooms)
-    google_classroom_code: models.CharField(max_length=7, validators=[MinLengthValidator(limit_value=6)], blank=True)
+    google_classroom_code = models.CharField(max_length=7, validators=[MinLengthValidator(limit_value=6)], blank=True)
 
     def __str__(self):
         return self.name

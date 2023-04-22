@@ -4,12 +4,6 @@ from recurrence.fields import RecurrenceField
 
 # Create your models here...
 
-class Days(models.Model):
-    days = models.CharField(max_length=9)
-
-    def __str__(self):
-        return self.days
-
 class Categories(models.Model):
     categories = models.CharField(max_length=30)
 

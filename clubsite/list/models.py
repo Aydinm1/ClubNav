@@ -22,7 +22,7 @@ class ClubPresidentName(models.Model):
     club_president_email = models.EmailField()
 
     def __str__(self):
-        return self.sponsor_name
+        return self.club_president_name
     
 class MeetingRooms(models.Model):
     meeting_room_name = models.CharField(max_length=30, blank=True)

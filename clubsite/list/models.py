@@ -38,7 +38,7 @@ class Club(models.Model):
     sponsor = models.ManyToManyField(SponsorName)
     club_president = models.ManyToManyField(ClubPresidentName, blank=True)
     category = models.ManyToManyField(Categories)
-    recurrences = RecurrenceField()
+    recurrences = RecurrenceField(blank=True)
     meeting_room = models.ManyToManyField(MeetingRooms, blank=True)
     google_classroom_code = models.CharField(max_length=7, validators=[MinLengthValidator(limit_value=6)], blank=True)
     start_time = models.TimeField(null=True, blank=True)

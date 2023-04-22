@@ -2,7 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 
-from .models import Club, Categories, SponsorName, MeetingRooms
+from .models import Club, Categories, SponsorName, MeetingRooms, ClubPresidentName
 
 class ClubAdmin(admin.ModelAdmin):
     model = Club
@@ -12,3 +12,4 @@ admin.site.register(Club, ClubAdmin)
 admin.site.register(Categories)
 admin.site.register(SponsorName)
 admin.site.register(MeetingRooms)
+admin.site.register(ClubPresidentName)

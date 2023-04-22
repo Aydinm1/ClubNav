@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import MinLengthValidator
 from recurrence.fields import RecurrenceField
+import datetime
 
 # Create your models here...
 
@@ -26,7 +27,7 @@ class ClubPresidentName(models.Model):
     
 class MeetingRooms(models.Model):
     meeting_room_name = models.CharField(max_length=30, blank=True)
-    meeting_room_number = models.CharField(max_length=5)
+    meeting_room_number = models.CharField(max_length=5, blank=True)
 
     def __str__(self):
         return self.meeting_room_number
@@ -41,8 +42,8 @@ class Club(models.Model):
     recurrences = RecurrenceField(blank=True)
     meeting_room = models.ManyToManyField(MeetingRooms, blank=True)
     google_classroom_code = models.CharField(max_length=7, validators=[MinLengthValidator(limit_value=6)], blank=True)
-    start_time = models.TimeField(null=True, blank=True)
-    end_time = models.TimeField(null=True, blank=True)
+    start_time = models.TimeField(null=True, blank=True, default=datetime.time(15, 30))
+    end_time = models.TimeField(null=True, blank=True, default=datetime.time(16, 30))
 
     def __str__(self):
         return self.name

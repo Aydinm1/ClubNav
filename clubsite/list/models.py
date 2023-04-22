@@ -36,13 +36,13 @@ class Club(models.Model):
     description = models.TextField(blank=True)
     picture = models.ImageField(upload_to='./images', blank=True)
     sponsor = models.ManyToManyField(SponsorName)
-    club_president = models.ForeignKey(ClubPresidentName, on_delete=models.SET_NULL, null=True)
+    club_president = models.ForeignKey(ClubPresidentName, on_delete=models.SET_NULL, null=True, blank=True)
     category = models.ManyToManyField(Categories)
     recurrences = RecurrenceField()
     meeting_room = models.ManyToManyField(MeetingRooms, blank=True)
     google_classroom_code = models.CharField(max_length=7, validators=[MinLengthValidator(limit_value=6)], blank=True)
-    start_time = models.TimeField(null=True)
-    end_time = models.TimeField(null=True)
+    start_time = models.TimeField(null=True, blank=True)
+    end_time = models.TimeField(null=True, blank=True)
 
     def __str__(self):
         return self.name

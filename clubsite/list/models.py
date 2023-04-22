@@ -42,8 +42,8 @@ class Club(models.Model):
     recurrences = RecurrenceField(blank=True)
     meeting_room = models.ManyToManyField(MeetingRooms, blank=True)
     google_classroom_code = models.CharField(max_length=7, validators=[MinLengthValidator(limit_value=6)], blank=True)
-    start_time = models.TimeField(null=True, blank=True, default=datetime.time(15, 30))
-    end_time = models.TimeField(null=True, blank=True, default=datetime.time(16, 30))
+    start_time = models.TimeField(blank=True, default=datetime.time(15, 30))
+    end_time = models.TimeField(blank=True, default=datetime.time(16, 30))
 
     def __str__(self):
         return self.name

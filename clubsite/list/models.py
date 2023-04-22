@@ -29,7 +29,7 @@ class Club(models.Model):
     description = models.TextField(blank=True)
     picture = models.ImageField(upload_to='./images', blank=True)
     sponsor = models.ManyToManyField(SponsorName)
-    category = models.ForeignKey(Categories, on_delete=models.CASCADE)
+    category = models.ManyToManyField(Categories)
     recurrences = RecurrenceField()
     meeting_room = models.ManyToManyField(MeetingRooms, blank=True)
     google_classroom_code = models.CharField(max_length=7, validators=[MinLengthValidator(limit_value=6)], blank=True)

@@ -21,6 +21,9 @@ class MeetingRooms(models.Model):
     meeting_room_name = models.CharField(max_length=30, blank=True)
     meeting_room_number = models.CharField(max_length=5)
 
+    def __str__(self):
+        return self.meeting_room_number
+
 class Club(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(blank=True)

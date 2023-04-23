@@ -2,7 +2,7 @@ body {
     background-color: grey;
 }
 div{
-    border:1px black solid; 
+    /*border:1px black solid; */
 }
 h1{
     color: black;
@@ -130,6 +130,11 @@ li a:hover{
 }
 
 #myFilter{
-    width:100%;
+    width:80%;
     height:100%;
+}
+
+.go{
+    height:100%;
+    width:20%;
 }

@@ -36,7 +36,7 @@ class MeetingRooms(models.Model):
 class Club(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(blank=True)
-    picture = models.ImageField(upload_to='./images', blank=True)
+    main_picture = models.ImageField(upload_to='./images', blank=True)
     sponsor = models.ManyToManyField(SponsorName)
     club_president = models.ManyToManyField(ClubPresidentName, blank=True)
     category = models.ManyToManyField(Categories)

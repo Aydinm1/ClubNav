@@ -25,7 +25,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ club.name }}</h5>
                             <p class="card-text">{{ club.description|truncatewords:10 }}</p>
-                            <a href="clubtemplate" class="btn btn-primary">Go somewhere</a>
+                            <a href="{% url 'club-template' %}" class="btn btn-primary">Go somewhere</a>
                         </div>
                         </div>
                     {% endfor %}

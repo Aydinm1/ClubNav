@@ -126,4 +126,5 @@ li a:hover{
     height:75%;
     display:flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }

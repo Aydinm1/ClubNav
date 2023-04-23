@@ -140,6 +140,6 @@ HAYSTACK_CONNECTIONS = {
 
 ALLOWED_HOSTS = ['*']
 
-MEDIA_ROOT = 'C:/Users/Abequ/Downloads/Club Project/Club-Project/clubsite/list/images'
+MEDIA_ROOT = 'D:/club project repository/Club-Project-1/clubsite/list/images'
 
 MEDIA_URL = '/'

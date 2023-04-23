@@ -36,7 +36,7 @@ class MeetingRooms(models.Model):
 class Club(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(blank=True)
-    main_picture = models.ImageField(upload_to='./images/mainimages', blank=True)
+    main_picture = models.ImageField(upload_to='.', blank=True)
     sponsor = models.ManyToManyField(SponsorName)
     club_president = models.ManyToManyField(ClubPresidentName, blank=True)
     category = models.ManyToManyField(Categories)
@@ -55,9 +55,9 @@ class Club(models.Model):
         Returns array of 3 random clubs.
         """
         count = self.objects.all().count()
-        random_index = sample(range(8, count), 3) # This is temporary..might end up using numpy because sometimes IDs won't be consecutive
+        random_index = sample(range(0, count), 21) # This is temporary..might end up using numpy because sometimes IDs won't be consecutive
         return self.objects.filter(id__in=random_index)
 
 class OtherImage(models.Model):
     club = models.ForeignKey(Club, blank=True, null=True, on_delete=models.CASCADE)
-    images = models.ImageField(upload_to='./images/otherimages', blank=True)
+    images = models.ImageField(upload_to='.', blank=True)

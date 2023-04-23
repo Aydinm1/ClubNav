@@ -5,7 +5,7 @@
     <head>
         <meta charset="utf-8">
         <title>Club Page</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles-clubs.css' %}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
@@ -13,7 +13,7 @@
             <img class = "banner-pic" src="{{ club.main_picture }}" alt="Card image cap">
         </div>
 
-        <div id = "mid">
+        <div id = "left-mid">
             <div id = "name-of-club"><h1>Name of Club</h1></div>
             <div id = "sponsor">
                 <h2>Sponsor: {{ club.sponsor }}</h2>
@@ -21,13 +21,15 @@
             <div id = "desc">
                 <p> {{ club.description }} </p>
             </div>
+        </div>
+        <div id = "right-mid">
             <div class = "images">
                 <img src = "{{ otherimage.images }}" alt = "Card image cap">
             </div>
 
             <div id = "info">
-                <p id = "emails"> {{ sponsorname.email }} </p>
-                <p id = "classroom-code"> {{ club.google_classroom_code }} </p>
+                <p id = "emails"> Sponsor Email: {{ sponsorname.email }} </p>
+                <p id = "classroom-code"> Classroom Code: {{ club.google_classroom_code }} </p>
             </div>
         </div>
     </body>

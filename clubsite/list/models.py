@@ -56,5 +56,5 @@ class Club(models.Model):
         return self.objects.filter(id__in=random_index)
 
 class OtherImage(models.Model):
-    club = models.ForeignKey(Club, blank=True, null=True, on_delete=models.SET_NULL)
+    club = models.ForeignKey(Club, blank=True, null=True, on_delete=models.CASCADE)
     images = models.ImageField(upload_to='./otherimages', blank=True)

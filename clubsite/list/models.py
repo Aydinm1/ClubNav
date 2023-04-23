@@ -52,7 +52,7 @@ class Club(models.Model):
     @classmethod
     def get_random_club(self):
         count = self.objects.all().count()
-        random_index = sample(range(0, count), 3)
+        random_index = sample(range(8, count), 3)
         return self.objects.filter(id__in=random_index)
 
 class OtherImage(models.Model):

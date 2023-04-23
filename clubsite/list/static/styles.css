@@ -2,7 +2,7 @@ body {
     background-color: grey;
 }
 div{
-    border:1px black solid;
+    border:1px black solid; 
 }
 h1{
     color: black;
@@ -109,7 +109,16 @@ li a:hover{
 }
 
 .cardOne{
-    margin:10px;
+    text-decoration: none;
+    margin-top: 40px;
+    margin-left: 30px;
+    display: flex;
+    align-content: center;
+    width: 400px;
+    height: 525px;
+    border-radius: 10px;
+    flex-direction: column;
+    box-shadow: 5px 5px 15px gray;
 }
 
 #bottomMid{

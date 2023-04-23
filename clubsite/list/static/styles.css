@@ -128,3 +128,8 @@ li a:hover{
     flex-direction: row;
     flex-wrap: wrap;
 }
+
+#myFilter{
+    width:100%;
+    height:100%;
+}

@@ -11,6 +11,14 @@ div{
     border: 1px black solid;
 }
 
+#mid{
+    background-color: white;
+}
+
+#banner-pic {
+    height: 20%;
+}
+
 #right-mid {
     float:right;
 }

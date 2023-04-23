@@ -137,3 +137,5 @@ HAYSTACK_CONNECTIONS = {
         'ADMIN_URL': 'http://127.0.0.1:8983/solr/admin/cores'
     },
 }
+
+ALLOWED_HOSTS = ['*']

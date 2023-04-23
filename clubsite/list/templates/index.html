@@ -21,7 +21,7 @@
                 
                     {% for club in random_clubs %}
                     <div class="cardOne" style="width: 18rem; height: 50%;">
-                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <img class="card-img-top" src="{{ club.main_picture }}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{ club.name }}</h5>
                             <p class="card-text">{{ club.description|truncatewords:10 }}</p>

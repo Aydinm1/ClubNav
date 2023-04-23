@@ -32,12 +32,7 @@ h1{
     
 }
 
-#bottomMid{
-    width:100%;
-    height:75%;
-    display:flex;
-    flex-direction: row;
-}
+
 
 #topMid{
     width:100%;
@@ -114,14 +109,12 @@ li a:hover{
 }
 
 .cardOne{
-    text-decoration: none;
-    margin-top: 40px;
-    margin-left: 30px;
-    display: flex;
-    align-content: center;
-    width: 400px;
-    height: 525px;
-    border-radius: 10px;
-    flex-direction: column;
-    box-shadow: 5px 5px 15px gray;
+    margin:10px;
+}
+
+#bottomMid{
+    width:100%;
+    height:75%;
+    display:flex;
+    flex-direction: row;
 }

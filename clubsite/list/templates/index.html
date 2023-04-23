@@ -17,14 +17,13 @@
                     <div id="searchContainer">
                         <div id = "searchbar">
                             <input type="text" id="myFilter" class="form-control" onkeyup="idk()" placeholder="Search Club by idk.">
-                            <button type="button" id="go">Click Me!</button>
                         </div>
                     </div>
                 </div>
                 <div id="bottomMid"> 
                 
                     {% for club in random_clubs %}
-                    <div class="cardOne" style="width: 18rem; height: 50%;">
+                    <div class="cardOne">
                         <img class="card-img-top" src="{{ club.main_picture }}" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">{{ club.name }}</h5>

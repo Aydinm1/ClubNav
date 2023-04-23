@@ -115,7 +115,7 @@ li a:hover{
     display: flex;
     align-content: center;
     width: 400px;
-    height: 525px;
+    height: 50%;
     border-radius: 10px;
     flex-direction: column;
     box-shadow: 5px 5px 15px gray;

@@ -1,28 +1,57 @@
 from django.db import models
+from django.core.validators import MinLengthValidator
+from recurrence.fields import RecurrenceField
+from random import sample
+import datetime
 
-# Create your models here.
+# Create your models here...
+
+class Categories(models.Model):
+    categories = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.categories
+    
+class SponsorName(models.Model):
+    sponsor_name = models.CharField(max_length=30)
+    sponsor_email = models.EmailField()
+
+    def __str__(self):
+        return self.sponsor_name
+    
+class ClubPresidentName(models.Model):
+    club_president_name = models.CharField(max_length=30)
+    club_president_email = models.EmailField()
+
+    def __str__(self):
+        return self.club_president_name
+    
+class MeetingRooms(models.Model):
+    meeting_room_name = models.CharField(max_length=30, blank=True)
+    meeting_room_number = models.CharField(max_length=5, blank=True)
+
+    def __str__(self):
+        return self.meeting_room_number + " " + self.meeting_room_name
 
 class Club(models.Model):
     name = models.CharField(max_length=50)
-    description = models.CharField(max_length=300)
-    picture = models.ImageField()
-    sponsor = models.CharField(max_length=30)
-    sponsor_email = models.EmailField()
-    category_choices = [
-        ('STEM', 'STEM'),
-        ('READWRITE', 'Reading/Writing'),
-        ('FUN', 'Fun'),
-        ('FINEART', 'Fine Arts'),
-        ('POLITICS', 'Politics'),
-        ('LANGUAGE', 'Language'),
-        ('SPORTS', 'Sports'),
-        ('ACTIVISMVOLUNTEER', 'Activism/Volunteering'),
-        ('STUDUNION', 'Student Unions'),
-        ('COMP', 'Competition'),
-        ('BUSI', 'Business'),
-        ('LEAD', 'Leadership'),
-    ]
-    category = models.CharField(
-        max_length=17,
-        choices=category_choices,
-    )
+    description = models.TextField(blank=True)
+    picture = models.ImageField(upload_to='./images', blank=True)
+    sponsor = models.ManyToManyField(SponsorName)
+    club_president = models.ManyToManyField(ClubPresidentName, blank=True)
+    category = models.ManyToManyField(Categories)
+    recurrences = RecurrenceField(blank=True)
+    meeting_room = models.ManyToManyField(MeetingRooms, blank=True)
+    google_classroom_code = models.CharField(max_length=7, validators=[MinLengthValidator(limit_value=6)], blank=True)
+    start_time = models.TimeField(blank=True, default=datetime.time(15, 30))
+    end_time = models.TimeField(blank=True, default=datetime.time(16, 30))
+
+    def __str__(self):
+        return self.name
+    
+    @classmethod
+    def get_random_club(self):
+        count = self.objects.all().count()
+        random_index = sample(range(0, count), 3)
+        return self.objects.filter(id__in=random_index)
+    

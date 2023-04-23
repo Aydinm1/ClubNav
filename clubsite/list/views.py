@@ -1,13 +1,14 @@
-from django.shortcuts import render
-
 # Create your views here.
 # Request handler - request -> response
 
 from django.http import HttpResponse
-# from django.template import loader
-# Deciding whether or not to use the template system 
-
+from .models import Club
+from django.template import loader
 
 def index(request):
-    # template = loader.get_template("list/index.html")
-    return HttpResponse("Hello, world. You're at the polls index.")
+    random_clubs = Club.get_random_club()
+    template = loader.get_template("index.html")
+    context = {
+        "random_clubs": random_clubs,
+    }
+    return HttpResponse(template.render(context))

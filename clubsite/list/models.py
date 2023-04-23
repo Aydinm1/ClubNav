@@ -36,7 +36,7 @@ class MeetingRooms(models.Model):
 class Club(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(blank=True)
-    main_picture = models.ImageField(upload_to='./images', blank=True)
+    main_picture = models.ImageField(upload_to='./mainimages', blank=True)
     sponsor = models.ManyToManyField(SponsorName)
     club_president = models.ManyToManyField(ClubPresidentName, blank=True)
     category = models.ManyToManyField(Categories)
@@ -57,4 +57,4 @@ class Club(models.Model):
 
 class OtherImage(models.Model):
     club = models.ForeignKey(Club, blank=True, null=True, on_delete=models.SET_NULL)
-    images = models.ImageField(upload_to='./images', blank=True)
+    images = models.ImageField(upload_to='./otherimages', blank=True)

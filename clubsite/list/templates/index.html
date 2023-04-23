@@ -28,7 +28,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ club.name }}</h5>
                             <p class="card-text">{{ club.description|truncatewords:10 }}</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <a href="{% url 'club-template' %}" class="btn btn-primary">Learn More</a>
                         </div>
                         </div>
                     {% endfor %}
@@ -47,20 +47,6 @@
             
         </div>
 
-
-
-      
-        
-        <!-- <div id = "suggestedBackground"><a href = "index.html"  id = "suggestedOne">Suggested</a></div> -->
         
     </body>
 </html>
-
-<!-- <style>
-    body{
-        background-color: yellow;
-    }
-    h1{
-        color:green;
-    }
-</style> -->

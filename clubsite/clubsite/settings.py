@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ninjapro_Clubs',
-        'USER': 'ninjapro_abe',
-        'PASSWORD': 'AbeSupreme@222',
+        'USER': 'ninjapro_kyle',
+        'PASSWORD': 'cameronsucks1191',
         'HOST': '45.79.135.22',
         'PORT': '3306',
         'STORAGE_ENGINE': 'INNODB',

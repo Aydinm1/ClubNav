@@ -12,3 +12,7 @@ def index(request):
         "random_clubs": random_clubs,
     }
     return HttpResponse(template.render(context))
+
+def clubtemplate(request):
+    template = loader.get_template("club-template.html")
+    return HttpResponse(template.render())

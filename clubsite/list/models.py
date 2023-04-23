@@ -33,10 +33,14 @@ class MeetingRooms(models.Model):
     def __str__(self):
         return self.meeting_room_number + " " + self.meeting_room_name
 
+class OtherImage(models.Model):
+    images = models.ImageField(upload_to='./images', blank=True)
+
 class Club(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(blank=True)
     main_picture = models.ImageField(upload_to='./images', blank=True)
+    other_pictures = models.ForeignKey(OtherImage, blank=True, null=True, on_delete=models.SET_NULL)
     sponsor = models.ManyToManyField(SponsorName)
     club_president = models.ManyToManyField(ClubPresidentName, blank=True)
     category = models.ManyToManyField(Categories)

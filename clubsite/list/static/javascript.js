@@ -1,27 +1,27 @@
 console.log("test");
 
-function myFunction() {
-    var input, filter, cards, cardContainer, title, i, date;
-    input = document.getElementById("myFilter");
-    filter = input.value.toUpperCase();
-    cardContainer = document.getElementById("bottomMid");
-    cards = cardContainer.getElementsByClassName("cardOne");
+// function myFunction() {
+//     var input, filter, cards, cardContainer, title, i, date;
+//     input = document.getElementById("myFilter");
+//     filter = input.value.toUpperCase();
+//     cardContainer = document.getElementById("bottomMid");
+//     cards = cardContainer.getElementsByClassName("cardOne");
       
     
-    for (i = 0; i < cards.length; i++) {
-      title = cards[i].querySelector(".card-title");
+//     for (i = 0; i < cards.length; i++) {
+//       title = cards[i].querySelector(".card-title");
       
-      if (title.innerText.toUpperCase().indexOf(filter) > -1) {
-        cards[i].style.display = "";
-      } 
-      else if(date.innerText.toUpperCase().indexOf(filter) > -1){
-        cards[i].style.display = "";
-      }
+//       if (title.innerText.toUpperCase().indexOf(filter) > -1) {
+//         cards[i].style.display = "";
+//       } 
+//       else if(date.innerText.toUpperCase().indexOf(filter) > -1){
+//         cards[i].style.display = "";
+//       }
       
       
-      else {
-        cards[i].style.display = "none";
-      }
-    }
+//       else {
+//         cards[i].style.display = "none";
+//       }
+//     }
      
-  }
+//   }

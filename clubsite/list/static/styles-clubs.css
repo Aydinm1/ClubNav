@@ -1,5 +1,26 @@
+div{
+    /* border:1px black solid;  */
+}
+
+#banner {
+    width:100%;
+    height:20%;
+    align-self: center;
+    justify-content: center;
+    margin-bottom: .5%;
+    border: 1px black solid;
+}
+
+#right-mid {
+    float:right;
+}
+
+#name-of-club{
+    
+}
 
 .images{
     float:right;
-
+    width: 100%;
+    height:20%;
 }

@@ -27,10 +27,9 @@
                     <img src = "{{ otherimage.images }}" alt = "Card image cap">
                 </div>
 
-                <div id = "info">
-                    <p id = "emails"> Sponsor Email: {{ sponsorname.email }} </p>
-                    <p id = "classroom-code"> Classroom Code: {{ club.google_classroom_code }} </p>
-                </div>
+            <div id = "info">
+                <p id = "emails"> Sponsor Email: {% for sponsor in sponsors %}{{ sponsor.sponsor_email }}{% endfor %} </p>
+                <p id = "classroom-code"> Classroom Code: {{ club.google_classroom_code }} </p>
             </div>
         </div>
     </body>

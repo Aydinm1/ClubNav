@@ -9,7 +9,7 @@
     </head>
     <body>
         <div id = "banner">
-            <img class = "banner-pic" src="{{ club.main_picture.url }}" alt="Card image cap">
+            <img class = "banner-pic" src="" alt="Card image cap">
         </div>
 
         <div id = "mid">
@@ -18,19 +18,21 @@
                 <div id = "sponsor">
                     <h2>Sponsor: {% for sponsor in sponsors %}{{ sponsor.sponsor_name }}{% endfor %}</h2>
                 </div>
+                <div id = "meeting-days">
+                    <head> {{}} </head>
+                </div>
                 <div id = "desc">
                     <p> {{ club.description }} </p>
                 </div>
             </div>
             <div id = "lower-mid">
-                <div class = "images">
-                    <img src = "{{ otherimage.images }}" alt = "Card image cap">
+                <div id = "info">
+                    <p id = "emails"> Sponsor Email: {% for sponsor in sponsors %}{{ sponsor.sponsor_email }}{% endfor %} </p>
+                    <p id = "classroom-code"> Classroom Code: {{ club.google_classroom_code }} </p>
                 </div>
-
-            <div id = "info">
-                <p id = "emails"> Sponsor Email: {% for sponsor in sponsors %}{{ sponsor.sponsor_email }}{% endfor %} </p>
-                <p id = "classroom-code"> Classroom Code: {{ club.google_classroom_code }} </p>
-            </div>
+                <div class = "images">
+                    <img src = "{{ club.main_picture.url }}" alt = "Card image cap">
+                </div>
         </div>
     </body>
 

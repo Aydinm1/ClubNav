@@ -10,20 +10,19 @@
     </head>
     <body>
         <div id = "banner">
-
-<h3 id="text">ClubNav</h3>
-
+                    <h3 id="text">ClubNav</h3>
         </div>
-
+        <div id="searchContainer">
+        <div id = "searchbar">
+            <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search Clubs">
+        </div>
+    </div>
         <div id="mid">
             <div id="searchDown">
                 <div id="topMid">
-                    <div id="searchContainer">
-                        <div id = "searchbar">
-                            <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search Clubs">
-                        </div>
-                    </div>
+                    
                 </div>
+                
                 <div id="bottomMid"> 
                 
                     {% for club in clubs %}
@@ -38,33 +37,34 @@
                         </div>
                         </div>
                     {% endfor %}
+
+                        
+
+
               </div>
                 
 
             </div>
-
-            <div id = "filter">
-                {% for category in getCategories %}
+            <div id="sidebar">
+                <div id = "filter">
+                    {% for category in getCategories %}
                 
-                <div class="filterItem">
-                    <div class="filterCheck">
-                        <input type="checkbox" class="realCheck">
-                    </div>
-                    <div div class="filterTitle">
-                        <h3>{{ category.categories }}</h3>
-                    </div>
+                    <div class="filterItem">
+                        <div class="filterCheck">
+                            <input type="checkbox" class="realCheck">
+                        </div>
+                        <div div class="filterTitle">
+                                <h3>{{ category.categories }}</h3>
+                        </div>
                     
-                </div>   
+                    </div>   
                     
                 
-                {% endfor %}
-            
+                    {% endfor %}
+                </div>
             </div>
         </div>
         
-        </div id = "bottom">
-            
-        </div>
         
         
     </body>

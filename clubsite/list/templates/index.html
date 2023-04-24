@@ -22,7 +22,7 @@
                 </div>
                 <div id="bottomMid"> 
                 
-                    {% for club in random_clubs %}
+                    {% for club in clubs %}
                     <div class="cardOne">
                         <img class="card-img-top" src="{{ club.main_picture }}" alt="Card image cap">
                         <div class="card-body">
@@ -36,10 +36,7 @@
                 
 
             </div>
-            <div id = "filter"></div>
-
-         
-
+            <div id = "filter">{% for category in getCategories %}{{ category.categories }}{% endfor %}</div> 
             </div>
         </div>
         

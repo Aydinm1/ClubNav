@@ -18,8 +18,8 @@
                 <div id = "sponsor">
                     <h2>Sponsor: {% for sponsor in sponsors %}{{ sponsor.sponsor_name }}{% endfor %}</h2>
                 </div>
-                <div id = "meeting-days">
-                    <head> {{}} </head>
+                <div id = "meeting-info">
+                    <head> Meeting Time: {{ club.start_time }} - {{ club.end_time }}</head>
                 </div>
                 <div id = "desc">
                     <p> {{ club.description }} </p>

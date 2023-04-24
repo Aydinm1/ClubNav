@@ -49,14 +49,14 @@ class Club(models.Model):
     def __str__(self):
         return self.name
     
-    @classmethod
-    def get_random_club(self):
-        """
-        Returns array of 3 random clubs.
-        """
-        count = self.objects.all().count()
-        random_index = sample(range(0, count), 21) # This is temporary..might end up using numpy because sometimes IDs won't be consecutive
-        return self.objects.filter(id__in=random_index)
+    # @classmethod
+    # def get_random_club(self):
+    #     """
+    #     Returns array of 3 random clubs.
+    #     """
+    #     count = self.objects.all().count()
+    #     random_index = sample(range(8, count), 3) # This is temporary..might end up using numpy because sometimes IDs won't be consecutive
+    #     return self.objects.filter(id__in=random_index)
 
 class OtherImage(models.Model):
     club = models.ForeignKey(Club, blank=True, null=True, on_delete=models.CASCADE)

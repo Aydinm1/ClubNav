@@ -7,11 +7,11 @@ from django.template import loader
 from django.shortcuts import get_object_or_404
 
 def index(request):
-    random_clubs = Club.get_random_club()
+    clubs = Club.objects.all()
     getCategories = Categories.objects.all()
     template = loader.get_template("index.html")
     context = {
-        "random_clubs": random_clubs,
+        "clubs": clubs,
         "getCategories": getCategories
     }
     return HttpResponse(template.render(context))

@@ -126,8 +126,47 @@ li a:hover{
     padding: 5px;
 
 }
-
+.imageHolder{
+    height:200px;
+    display: flex;
+}
 .card-img-top{
-    border:red 10px solid;
+    overflow:hidden;
+    object-fit: cover;
+    object-position: left top;
+}
 
+
+#filter{
+    border:1px solid black;
+    display:flex;
+    flex-direction: column;
+
+}
+
+.filterItem{
+    height:50px;
+    display:flex;
+}
+
+.filterCheck{
+    border:1px green solid;
+  width:20%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.filterTitle{
+    border: 1px blue solid;
+    width:80%;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+
+.realCheck{
+    width:20px;
+    height: 20px;
 }

@@ -10,11 +10,11 @@
     <body>
         <div id = "banner">
             <img class = "banner-pic" src="" alt="Card image cap">
+            <div id = "name-of-club"><h1>{{ club.name }}</h1></div>
         </div>
 
         <div id = "mid">
             <div id = "upper-mid">
-                <div id = "name-of-club"><h1>{{ club.name }}</h1></div>
                 <div id = "sponsor">
                     <h2>Sponsor: {% for sponsor in sponsors %}{{ sponsor.sponsor_name }}{% endfor %}</h2>
                 </div>

@@ -18,10 +18,10 @@ def index(request):
 
 def clubtemplate(request, club_id):
     clubs = get_object_or_404(Club, pk=club_id)
-    sponsor = SponsorName.objects.filter(club=club_id)
+    sponsors = SponsorName.objects.filter(club=club_id)
     context = {
         "club": clubs,
-        "sponsor": sponsor
+        "sponsors": sponsors
     }
     template = loader.get_template("club-template.html")
     return HttpResponse(template.render(context))

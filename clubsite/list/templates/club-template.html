@@ -28,7 +28,7 @@
                 </div>
 
             <div id = "info">
-                <p id = "emails"> Sponsor Email: {{ sponsor.sponsor_email }} </p>
+                <p id = "emails"> Sponsor Email: {% for sponsor in sponsors %}{{ sponsor.sponsor_email }}{% endfor %} </p>
                 <p id = "classroom-code"> Classroom Code: {{ club.google_classroom_code }} </p>
             </div>
         </div>

@@ -14,9 +14,9 @@
 
         <div id = "mid">
             <div id = "left-mid">
-                <div id = "name-of-club"><h1>Name of Club</h1></div>
+                <div id = "name-of-club"><h1>{{ club.name }}</h1></div>
                 <div id = "sponsor">
-                    <h2>Sponsor: {{ club.sponsor }}</h2>
+                    <h2>Sponsor: {% for sponsor in sponsors %}{{ sponsor.sponsor_name }}{% endfor %}</h2>
                 </div>
                 <div id = "desc">
                     <p> {{ club.description }} </p>

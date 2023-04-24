@@ -11,9 +11,11 @@ h1{
 #banner {
     width:100%;
     height:20%;
-    align-self: center;
-    justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content:center;
     margin-bottom: .5%;
+    background-color:#C15700;
 }
 
 #searchDown{
@@ -32,6 +34,7 @@ h1{
     display:flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 #searchContainer{
@@ -161,4 +164,9 @@ li a:hover{
 .realCheck{
     width:20px;
     height: 20px;
+}
+
+#text{
+    color:white;
+    font-size: 96px;
 }

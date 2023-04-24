@@ -13,9 +13,7 @@ h1{
     height:20%;
     display: flex;
     align-items: center;
-    justify-content:center;
-    margin-bottom: .5%;
-    background-color:#C15700;
+    background-color:#F7E0C4;
 }
 
 #searchDown{
@@ -40,6 +38,9 @@ h1{
     display:flex;
     align-items: center;
     justify-content: center;
+    background-color: C15700;
+    padding:15px;
+    border-bottom: lightgray 1px solid;
 }
 #searchbar {
     display: flex;
@@ -111,10 +112,10 @@ li a:hover{
 }
 
 #bottomMid{
-    width:100%;
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 #myFilter{
@@ -168,10 +169,26 @@ li a:hover{
 }
 
 #text{
-    color:white;
+    color:black;
     font-size: 96px;
 }
 
 #sidebar{
     display: flex;
+    padding-top: 30px;
+    padding-left: 0px;
+}
+
+#logo{
+position:absolute;
+left: 50px;
+top:50px;
+width:10px;
+}
+
+#pageTitle{
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }

@@ -12,19 +12,20 @@
             <img class = "banner-pic" src="{{ club.main_picture }}" alt="Card image cap">
         </div>
 
-        <div id = "left-mid">
-            <div id = "name-of-club"><h1>Name of Club</h1></div>
-            <div id = "sponsor">
-                <h2>Sponsor: {{ club.sponsor }}</h2>
+        <div id = "mid">
+            <div id = "left-mid">
+                <div id = "name-of-club"><h1>Name of Club</h1></div>
+                <div id = "sponsor">
+                    <h2>Sponsor: {{ club.sponsor }}</h2>
+                </div>
+                <div id = "desc">
+                    <p> {{ club.description }} </p>
+                </div>
             </div>
-            <div id = "desc">
-                <p> {{ club.description }} </p>
-            </div>
-        </div>
-        <div id = "right-mid">
-            <div class = "images">
-                <img src = "{{ otherimage.images }}" alt = "Card image cap">
-            </div>
+            <div id = "right-mid">
+                <div class = "images">
+                    <img src = "{{ otherimage.images }}" alt = "Card image cap">
+                </div>
 
             <div id = "info">
                 <p id = "emails"> Sponsor Email: {{ sponsor.sponsor_email }} </p>

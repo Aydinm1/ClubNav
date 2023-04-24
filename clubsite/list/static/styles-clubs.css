@@ -19,8 +19,12 @@ div{
     height: 20%;
 }
 
-#right-mid {
-    float:right;
+#lower-mid {
+    
+}
+
+#desc{
+    width:50%;
 }
 
 #name-of-club{

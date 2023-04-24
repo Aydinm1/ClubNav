@@ -128,11 +128,6 @@ li a:hover{
 }
 
 .card-img-top{
-    overflow: hidden;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    max-width: 100%;
-    object-fit: cover;
-    object-position: left top;
+    border:red 10px solid;
 
 }

@@ -24,7 +24,9 @@
                 
                     {% for club in clubs %}
                     <div class="cardOne">
-                        <img class="card-img-top" src="{{ club.main_picture }}" alt="Card image cap">
+                        <div class="imageHolder">
+                            <img class="card-img-top" src="{{ club.main_picture }}" alt="Card image cap">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">{{ club.name }}</h5>
                             <p class="card-text">{{ club.description|truncatewords:10 }}</p>
@@ -36,14 +38,30 @@
                 
 
             </div>
-            <div id = "filter">{% for category in getCategories %}{{ category.categories }}{% endfor %}</div> 
+
+            <div id = "filter">
+                {% for category in getCategories %}
+                
+                <div class="filterItem">
+                    <div class="filterCheck">
+                        <input type="checkbox" class="realCheck">
+                    </div>
+                    <div div class="filterTitle">
+                        <h3>{{ category.categories}}</h3>
+                    </div>
+                    
+                </div>   
+                    
+                
+                {% endfor %}
+            
             </div>
         </div>
         
         </div id = "bottom">
             
         </div>
-
+        
         
     </body>
 </html>

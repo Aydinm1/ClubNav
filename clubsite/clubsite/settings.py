@@ -80,8 +80,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'ninjapro_Clubs',
-        'USER': 'ninjapro_kyle',
-        'PASSWORD': 'cameronsucks1191',
+        'USER': 'ninjapro_abe',
+        'PASSWORD': 'AbeSupreme@222',
         'HOST': '45.79.135.22',
         'PORT': '3306',
         'STORAGE_ENGINE': 'INNODB',
@@ -140,6 +140,6 @@ HAYSTACK_CONNECTIONS = {
 
 ALLOWED_HOSTS = ['*']
 
-MEDIA_ROOT = 'C:/Users/aydin/clubs/Club-Project/clubsite/list/images'
+MEDIA_ROOT = 'C:/Users/Abequ/Downloads/Club Project/Club-Project/clubsite/list/images'
 
 MEDIA_URL = '/'

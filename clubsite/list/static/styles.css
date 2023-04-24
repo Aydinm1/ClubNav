@@ -116,7 +116,6 @@ li a:hover{
     width: 400px;
     height: 50px;
     border-radius: 8px;
-    border: 1px #00538a solid;
     padding: 5px;
 
 }
@@ -135,6 +134,7 @@ li a:hover{
     border:1px solid black;
     display:flex;
     flex-direction: column;
+    height:100%;
 
 }
 
@@ -144,7 +144,6 @@ li a:hover{
 }
 
 .filterCheck{
-    border:1px green solid;
   width:20%;
   display:flex;
   align-items: center;
@@ -153,7 +152,6 @@ li a:hover{
 }
 
 .filterTitle{
-    border: 1px blue solid;
     width:80%;
     display: flex;
     align-items: center;

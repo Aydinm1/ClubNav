@@ -26,3 +26,4 @@ class ListClubTemplateViewTests(TestCase):
         sponsors = create_multiple_sponsors(3)
         url = reverse("list:clubtemplate")
         self.assertContains(url.context["sponsors"], "example@example.com, example@example.com and example@example.com")
+        self.assertContains(url.context["sponsors"], "example, example and example")

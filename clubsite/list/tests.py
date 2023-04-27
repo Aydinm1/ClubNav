@@ -23,6 +23,8 @@ def create_multiple_sponsors(n: int, email="example@example.com", name="example"
 #         """
 #         Returns true if comma separation passes.
 #         """
-#         sponsors = create_multiple_sponsors(3)
-#     
-#     url = reverse("list:clubtemplate")
+#         create_multiple_sponsors(3)
+#         url = reverse("list:clubtemplate")
+#         self.assertQuerySetEqual(
+#               url, "example"
+#         )

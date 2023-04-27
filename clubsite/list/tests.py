@@ -18,13 +18,11 @@ def create_multiple_sponsors(n: int, email="example@example.com", name="example"
         ]
     )
 
-# class ListIndexViewTests(TestCase):
-#     def test_three_sponsors(self):
-#         """
-#         Returns true if comma separation passes.
-#         """
-#         create_multiple_sponsors(3)
-#         url = reverse("list:clubtemplate")
-#         self.assertQuerySetEqual(
-#               url, "example"
-#         )
+class ListIndexViewTests(TestCase):
+    def test_three_sponsors(self):
+        """
+        Validates comma separation.
+        """
+        sponsors = create_multiple_sponsors(3)
+        url = reverse("list:clubtemplate")
+        self.assertContains(url.context["sponsors"], "example@example.com, example@example.com and example@example.com")

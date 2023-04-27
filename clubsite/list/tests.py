@@ -1,6 +1,6 @@
 from django.test import TestCase
 from django.urls import reverse
-from models import SponsorName
+from .models import SponsorName
 
 # Create your tests here.
 

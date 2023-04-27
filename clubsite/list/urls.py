@@ -4,6 +4,7 @@ from django.conf.urls.static import static
 from django.urls import path
 from . import views
 
+app_name = "list"
 urlpatterns = [
     path('', views.index),
     path('<int:club_id>/', views.clubtemplate, name = 'club-template'),

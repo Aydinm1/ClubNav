@@ -18,7 +18,7 @@ def create_multiple_sponsors(n: int, email="example@example.com", name="example"
         ]
     )
 
-class ListIndexViewTests(TestCase):
+class ListClubTemplateViewTests(TestCase):
     def test_three_sponsors(self):
         """
         Validates comma separation.

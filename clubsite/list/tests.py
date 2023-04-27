@@ -17,3 +17,12 @@ def create_multiple_sponsors(n: int, email="example@example.com", name="example"
             [SponsorName(sponsor_name=name, sponsor_email=email) for _ in range(n)]
         ]
     )
+
+# class ListIndexViewTests(TestCase):
+#     def test_three_sponsors(self):
+#         """
+#         Returns true if comma separation passes.
+#         """
+#         sponsors = create_multiple_sponsors(3)
+#     
+#     url = reverse("list:clubtemplate")

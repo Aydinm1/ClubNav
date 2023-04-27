@@ -27,7 +27,7 @@
             </div>
             <div id = "lower-mid">
                 <div id = "info">
-                    <p id = "emails"> Sponsor Email: {% for sponsor in sponsors %}{% include "comma.html" %}{{ sponsor.sponsor_email }}{% endfor %} </p>
+                    <p id = "emails"> Sponsor Email: {% for sponsor in sponsors %}{% include "comma.html" %}{{ sponsor.sponsor_email|urlize }}{% endfor %} </p>
                     <p id = "classroom-code"> Classroom Code: {% if club.google_classroom_code %}{{ club.google_classroom_code }}{% else %}None{% endif %} </p>
                 </div>
                 <div class = "images">

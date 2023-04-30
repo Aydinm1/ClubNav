@@ -57,9 +57,9 @@ div{
 }
 
 #content{
+    width: 100%;
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
     justify-content: center;
     max-width: 1800px;
 }

@@ -21,7 +21,7 @@ div{
 }
 
 #mid{
-    background-color: white;
+    border: 1px black solid;
 }
 
 #banner-pic {

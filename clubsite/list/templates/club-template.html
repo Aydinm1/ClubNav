@@ -11,33 +11,33 @@
         <div id = "banner" style="background-image: url({{ club.main_picture.url }});">
             <div id = "name-of-club"><h1>{{ club.name }}</h1></div>
         </div>
-
-        <div id = "mid">
-            <div id = "upper-mid">
-                <div id = "sponsor">
-                    <h2>Sponsor: {% for sponsor in sponsors %}{% include "comma.html" %}{{ sponsor.sponsor_name }}{% endfor %}</h2>
-                    <p id = "emails"> Sponsor Email: {% for sponsor in sponsors %}{% include "comma.html" %}{{ sponsor.sponsor_email|urlize }}{% endfor %} </p>
+        
+        <div id = "content">
+            <div id = "mid">
+                <div id = "upper-mid">
+                    <div id = "sponsor">
+                        <h2>Sponsor: {% for sponsor in sponsors %}{% include "comma.html" %}{{ sponsor.sponsor_name }}{% endfor %}</h2>
+                        <p id = "emails"> Sponsor Email: {% for sponsor in sponsors %}{% include "comma.html" %}{{ sponsor.sponsor_email|urlize }}{% endfor %} </p>
+                    </div>
+                    <div id = "meeting-info">
+                        <head> Meeting Time: {{ club.start_time }} - {{ club.end_time }}</head>
+                    </div>
                 </div>
-                <div id = "meeting-info">
-                    <head> Meeting Time: {{ club.start_time }} - {{ club.end_time }}</head>
+                <div id = "lower-mid">
+                    <div id = "info">
+                        <p id = "classroom-code"> Classroom Code: {% if club.google_classroom_code %}{{ club.google_classroom_code }}{% else %}None{% endif %} </p>
+                    </div>
+                    <div class = "images">
+                        <img src = "" alt = "Card image cap">
+                    </div>
                 </div>
             </div>
-            <div id = "lower-mid">
-                <div id = "info">
-                    <p id = "classroom-code"> Classroom Code: {% if club.google_classroom_code %}{{ club.google_classroom_code }}{% else %}None{% endif %} </p>
-                </div>
-                <div class = "images">
-                    <img src = "" alt = "Card image cap">
-                </div>
-            </div>
-        </div>
 
-        <div>
             <div id = "desc">
                 <p> {{ club.description|linebreaks }} </p>
             </div>
         </div>
-
+        
     </body>
 
 </html>

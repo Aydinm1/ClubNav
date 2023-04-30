@@ -21,7 +21,7 @@
                     <head> Meeting Time: {{ club.start_time }} - {{ club.end_time }}</head>
                 </div>
                 <div id = "desc">
-                    <p> {{ club.description }} </p>
+                    <p> {{ club.description|linebreaks }} </p>
                 </div>
             </div>
             <div id = "lower-mid">

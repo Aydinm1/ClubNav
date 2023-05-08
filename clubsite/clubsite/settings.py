@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'haystack',
     'list.apps.ListConfig',
     'recurrence',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

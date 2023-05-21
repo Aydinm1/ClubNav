@@ -3,4 +3,4 @@ django-recurrence==1.11.1
 mysqlclient==2.1.1
 Pillow==9.5.0
 django-haystack==3.2.1
-pysolr==3.9.0
+elasticsearch==7.17.9

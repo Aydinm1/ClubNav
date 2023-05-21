@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
-from django.urls import path, include
+from django.urls import path
 from . import views
 
 app_name = "list"
@@ -9,5 +9,4 @@ urlpatterns = [
     path('', views.index, name = 'index'),
     path('<int:club_id>/', views.clubtemplate, name = 'club-template'),
     path('admin/', admin.site.urls),
-    path('search/', include('haystack.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

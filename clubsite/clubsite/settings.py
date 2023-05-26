@@ -41,9 +41,12 @@ INSTALLED_APPS = [
     'haystack',
     'list.apps.ListConfig',
     'recurrence',
+    'corsheaders',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -144,3 +147,6 @@ ALLOWED_HOSTS = ['*']
 MEDIA_ROOT = os.path.join(BASE_DIR, 'list/images')
 
 MEDIA_URL = '/'
+
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = ("http://localhost:8070",)

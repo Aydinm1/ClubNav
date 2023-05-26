@@ -5,3 +5,4 @@ Pillow==9.5.0
 django-haystack==3.2.1
 elasticsearch==7.17.9
 djangorestframework==3.14.0
+django-cors-headers==4.0.0

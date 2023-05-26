@@ -1,12 +1,15 @@
 # Create your views here.
 # Request handler - request -> response
 
+from rest_framework import viewsets
+from .serializers import ClubSerializer
 from django.http import HttpResponse
 from .models import Club, SponsorName, Categories, MeetingRooms
 from django.template import loader
 from django.shortcuts import get_object_or_404
 
 def index(request):
+    serializer_class = ClubSerializer
     clubs = Club.objects.all()
     getCategories = Categories.objects.all()
     template = loader.get_template("index.html")

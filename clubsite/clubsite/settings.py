@@ -149,4 +149,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'list/images')
 MEDIA_URL = '/'
 
 CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = ("http://localhost:8070",)
+CORS_ORIGIN_WHITELIST = ("http://localhost:8080",)

@@ -9,7 +9,7 @@ from django.template import loader
 from django.shortcuts import get_object_or_404
 
 def index(request):
-    serializer_class = ClubSerializer
+    serializer = ClubSerializer
     clubs = Club.objects.all()
     getCategories = Categories.objects.all()
     template = loader.get_template("index.html")

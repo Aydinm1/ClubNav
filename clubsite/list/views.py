@@ -8,16 +8,9 @@ from .models import Club, SponsorName, Categories, MeetingRooms
 from django.template import loader
 from django.shortcuts import get_object_or_404
 
-def index(request):
-    serializer = ClubSerializer
+class ClubViewSet(viewsets.ModelViewSet):
+    serializer_class = ClubSerializer
     clubs = Club.objects.all()
-    getCategories = Categories.objects.all()
-    template = loader.get_template("index.html")
-    context = {
-        "clubs": clubs,
-        "getCategories": getCategories
-    }
-    return HttpResponse(template.render(context))
 
 def clubtemplate(request, club_id):
     clubs = get_object_or_404(Club, pk=club_id)

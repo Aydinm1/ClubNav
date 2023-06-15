@@ -1,7 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/Header.vue'
-import axios from 'axios'
+import HelloWorld from './components/Banner.vue'
 </script>
 
 <template>

@@ -1,3 +1,27 @@
+<script setup>
+</script>
+
+<template>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <div id = "banner">
+
+    <div id="pageTitle">
+      <h1 id="text">ClubNav</h1>
+    </div>
+            
+    <div id = "searchbar">
+      <input type="text" id="myFilter" class="form-control" onkeyup="myFunction()" placeholder="Search Clubs">
+    </div>
+
+    <div id="logo">
+      <img id="logoImg" src='https://www.d128.org/files/theme%20files/lhslogo-2.png'>
+    </div>
+
+  </div>
+</template>
+
+<style scoped>
 body {
     background-color: grey;
 }
@@ -192,3 +216,5 @@ li a:hover{
 #logoImg{
     width:450px;
 }
+
+</style>

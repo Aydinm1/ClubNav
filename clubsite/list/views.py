@@ -10,7 +10,7 @@ from django.shortcuts import get_object_or_404
 
 class ClubViewSet(viewsets.ModelViewSet):
     serializer_class = ClubSerializer
-    clubs = Club.objects.all()
+    queryset = Club.objects.all()
 
 def clubtemplate(request, club_id):
     clubs = get_object_or_404(Club, pk=club_id)

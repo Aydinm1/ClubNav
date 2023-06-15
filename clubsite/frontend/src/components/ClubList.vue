@@ -1,3 +1,7 @@
+<script setup>
+import axios from 'axios'
+</script>
+
 <template>
   <div class="item">
     <i>

@@ -22,10 +22,6 @@
 </template>
 
 <style scoped>
-body {
-    background-color: grey;
-}
-
 h1{
     color: black;
     text-align:center;
@@ -48,14 +44,6 @@ h1{
     flex-direction:column;
 }
 
-#topMid{
-    height:25%;
-    display:flex;
-    justify-content:center;
-    align-items: center;
-    
-}
-
 #searchContainer{
     display:flex;
     align-items: center;
@@ -70,11 +58,6 @@ h1{
     justify-content: center;
 }
 
-
-#mid{
-    width:100%;
-    display:flex;
-}
 #suggestedBackground {
     width:150px;
     height:47px;
